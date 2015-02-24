@@ -11,11 +11,9 @@
 
 @class WBASettings;
 
-@interface WBADetailViewController : UIViewController
+@interface WBADetailViewController : UITableViewController
 
 @property (nonatomic, strong) WBASettings *detailItem;
-
-@property (nonatomic, weak) IBOutlet UILabel *detailDescriptionLabel;
 
 
 @end

@@ -1,0 +1,6 @@
+[submodule "Thirdparty/WBA"]
+	path = Thirdparty/WBA
+	url = git@github.com:Ridiculous-Innovations/WBAFramework.git
+[submodule "Thirdparty/WBANetworking"]
+	path = Thirdparty/WBANetworking
+	url = git@github.com:Ridiculous-Innovations/WBANetworking.git

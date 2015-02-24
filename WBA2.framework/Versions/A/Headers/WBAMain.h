@@ -19,6 +19,8 @@ extern NSString *const WBATranslationDataTranslationBeenUpdatedNotification;
 @interface WBAMain : NSObject
 
 
+@property (nonatomic) WBATranslations *translations;
+
 @property (nonatomic, readonly) WBATranslationData *data;
 
 // Based on what start method has been used, could be default for wellbakedapp.com, custom for any custom URL you might uploaded the API files to or local only which only takes files from the bundle. Each variant requires bundle files to be present.

@@ -95,8 +95,8 @@
     if (_detailItem) {
         [_accountName setValue:_detailItem.name];
         [_serverHost setValue:_detailItem.host];
-        [_serverPort setValue:[NSString stringWithFormat:@"%ld", _detailItem.port.integerValue]];
-        [_appId setValue:[NSString stringWithFormat:@"%ld", _detailItem.appId.integerValue]];
+        [_serverPort setValue:[NSString stringWithFormat:@"%ld", (long)_detailItem.port.integerValue]];
+        [_appId setValue:[NSString stringWithFormat:@"%ld", (long)_detailItem.appId.integerValue]];
         [_versionId setValue:_detailItem.version];
         [_apiKey setValue:_detailItem.apiKey];
     }

@@ -15,6 +15,7 @@
 
 @property (nonatomic, copy) void (^didReceiveInfoFileResponse)(NSDictionary *data, NSError *error);
 @property (nonatomic, copy) void (^didReceiveLocalizationFileResponse)(NSDictionary *data, NSError *error);
+@property (nonatomic, copy) void (^localizationFilesAreUpToDate)();
 
 @property (nonatomic, strong) WBARegisteredElements *registeredElements;
 
