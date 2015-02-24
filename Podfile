@@ -1,0 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.1'
+pod 'RETableViewManager'
+pod 'FontAwesomeKit', '~> 2.1.0'
+pod 'Reachability'
