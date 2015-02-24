@@ -18,6 +18,8 @@
 		156DED451A9B9CDD00FF8725 /* LiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156DED441A9B9CDD00FF8725 /* LiveUITests.m */; };
 		156DED551A9BA19300FF8725 /* WBAEditSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156DED541A9BA19300FF8725 /* WBAEditSettingsViewController.m */; };
 		156DED5C1A9C849900FF8725 /* WBASettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 156DED5B1A9C849900FF8725 /* WBASettings.m */; };
+		156DED611A9C956100FF8725 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156DED601A9C956100FF8725 /* WBA2.framework */; };
+		156DED621A9C956100FF8725 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156DED601A9C956100FF8725 /* WBA2.framework */; };
 		DC405F5BCE0743B71E727624 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1F04CB07E19B45422898A7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		156DED541A9BA19300FF8725 /* WBAEditSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAEditSettingsViewController.m; sourceTree = "<group>"; };
 		156DED5A1A9C849900FF8725 /* WBASettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBASettings.h; sourceTree = "<group>"; };
 		156DED5B1A9C849900FF8725 /* WBASettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBASettings.m; sourceTree = "<group>"; };
+		156DED601A9C956100FF8725 /* WBA2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WBA2.framework; sourceTree = "<group>"; };
 		7137CAB6F947C83B601327C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E1F04CB07E19B45422898A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D820F5E94CC73BB8C745A0FD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156DED611A9C956100FF8725 /* WBA2.framework in Frameworks */,
 				DC405F5BCE0743B71E727624 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156DED621A9C956100FF8725 /* WBA2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +201,7 @@
 		5C494F4B658A5F72650BFF36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				156DED601A9C956100FF8725 /* WBA2.framework */,
 				8E1F04CB07E19B45422898A7 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -476,8 +482,14 @@
 			baseConfigurationReference = D820F5E94CC73BB8C745A0FD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LiveUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -488,8 +500,12 @@
 			baseConfigurationReference = 7137CAB6F947C83B601327C6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LiveUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -500,9 +516,11 @@
 			baseConfigurationReference = D820F5E94CC73BB8C745A0FD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -523,6 +541,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LiveUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -573,8 +592,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fuerte Int Ltd";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LiveUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
@@ -586,9 +609,11 @@
 			baseConfigurationReference = 7137CAB6F947C83B601327C6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Fuerte Int Ltd";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LiveUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

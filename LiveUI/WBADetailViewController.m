@@ -7,6 +7,7 @@
 //
 
 #import "WBADetailViewController.h"
+#import <WBA2/WBA2.h>
 #import "WBASettings.h"
 
 
@@ -43,7 +44,7 @@
 #pragma mark Actions
 
 - (void)refreshClicked:(UIBarButtonItem *)sender {
-    
+    NSLog(@"Keys: %@", [WBATranslations allKeys]);
 }
 
 #pragma mark View lifecycle
