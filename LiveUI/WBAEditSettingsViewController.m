@@ -56,12 +56,14 @@
     [_manager addSection:section];
     
     _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:@"my.example-host.com"];
+    [_serverHost setEnabled:NO];
     [_serverHost setValidators:@[@"presence"]];
     [_serverHost setKeyboardType:UIKeyboardTypeURL];
     [_serverHost setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverHost];
     
     _serverPort = [RENumberItem itemWithTitle:@"Port" value:nil placeholder:@"80" format:@"XXXXXXXX"];
+    [_serverPort setEnabled:NO];
     [_serverPort setValidators:@[@"presence", @"length(1, 8)"]];
     [section addItem:_serverPort];
     
@@ -76,6 +78,7 @@
     [section addItem:_versionId];
     
     _apiKey = [RETextItem itemWithTitle:@"API Key" value:nil placeholder:@"laufhao78f67sdg58gs4dga4df8gad"];
+    [_apiKey setEnabled:NO];
     [_versionId setValidators:@[@"presence"]];
     [_versionId setKeyboardType:UIKeyboardTypeURL];
     [_versionId setAutocorrectionType:UITextAutocorrectionTypeNo];
@@ -102,8 +105,10 @@
     }
     else {
         [_accountName setValue:@""];
-        [_serverHost setValue:@"http://api.liveui.io"];
-        [_serverPort setValue:@"80"];
+        //[_serverHost setValue:@"http://api.liveui.io"];
+        //[_serverPort setValue:@"80"];
+        [_serverHost setValue:@""];
+        [_serverPort setValue:@""];
         [_appId setValue:@"2"];
         [_versionId setValue:@"staging"];
         [_apiKey setValue:@""];
