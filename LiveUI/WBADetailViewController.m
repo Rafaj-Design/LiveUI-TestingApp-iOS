@@ -29,7 +29,8 @@
 - (void)reloadData {
     WBATranslationData *basicData = [[WBATranslationData alloc] initWithBundledWBALocalizationFileNamed:@"" withDefaultLanguageCode:@"en"];
     //[[WBAMain sharedWBA] startTranslationsWithBasicData:basicData andApplicationId:2];
-    NSString *urlString = [NSString stringWithFormat:@"http://s3.amazonaws.com/admin.wellbakedapp.com/API_1.0/%ld/%@/", (long)_detailItem.appId.integerValue, _detailItem.version];
+    NSString *path = [NSString stringWithFormat:@"%ld/%@/", (long)_detailItem.appId.integerValue, _detailItem.version];
+    NSString *urlString = [_detailItem.host stringByAppendingPathComponent:path];
     [[WBAMain sharedWBA] startTranslationsWithBasicData:basicData andCustomUrl:[NSURL URLWithString:urlString]];
     //[[WBAMain sharedWBA] startTranslationsWithBasicData:basicData];
     
@@ -82,7 +83,7 @@
 #pragma mark Actions
 
 - (void)refreshClicked:(UIBarButtonItem *)sender {
-    [self reloadData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 #pragma mark View lifecycle

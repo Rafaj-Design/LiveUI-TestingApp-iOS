@@ -10,6 +10,7 @@
 #import "WBADetailViewController.h"
 #import "WBAEditSettingsViewController.h"
 #import "WBASettings.h"
+#import "WBAMain.h"
 
 
 @interface WBAMasterViewController ()
@@ -22,6 +23,30 @@
 
 @implementation WBAMasterViewController
 
+
+#pragma mark - Creating elements
+
+- (void)createToolBar {
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             //[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                             //                                              target:self
+                             //                                              action:nil],
+                             [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                             [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                           target:self
+                                                                           action:@selector(reset:)],
+                             nil];
+    [self setToolbarItems:toolbarItems];
+    [self.navigationController setToolbarHidden:NO];
+}
+
+#pragma mark - Actions
+
+- (void)reset:(id)sender {
+    [WBAMain resetCache];
+}
+
+#pragma mark - View lifecycle
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -37,6 +62,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showPopover:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (WBADetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [self createToolBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +96,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        [WBAMain resetCache];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         WBASettings *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         WBADetailViewController *controller = (WBADetailViewController *)[[segue destinationViewController] topViewController];

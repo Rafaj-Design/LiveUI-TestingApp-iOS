@@ -48,6 +48,7 @@
     [_manager addSection:section];
     
     _accountName = [RETextItem itemWithTitle:@"Name" value:nil placeholder:@"Account name"];
+    [_accountName setClearButtonMode:UITextFieldViewModeWhileEditing];
     [_accountName setValidators:@[@"presence", @"length(1, 999)"]];
     [_accountName setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [section addItem:_accountName];
@@ -55,34 +56,39 @@
     section = [RETableViewSection sectionWithHeaderTitle:@"Server"];
     [_manager addSection:section];
     
-    _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:@"my.example-host.com"];
-    [_serverHost setEnabled:NO];
+    _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:@"http://my.example-host.com"];
+    [_serverHost setClearButtonMode:UITextFieldViewModeWhileEditing];
+    //[_serverHost setEnabled:NO];
     [_serverHost setValidators:@[@"presence"]];
     [_serverHost setKeyboardType:UIKeyboardTypeURL];
     [_serverHost setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverHost];
     
-    _serverPort = [RENumberItem itemWithTitle:@"Port" value:nil placeholder:@"80" format:@"XXXXXXXX"];
-    [_serverPort setEnabled:NO];
-    [_serverPort setValidators:@[@"presence", @"length(1, 8)"]];
-    [section addItem:_serverPort];
+//    _serverPort = [RENumberItem itemWithTitle:@"Port" value:nil placeholder:@"80" format:@"XXXXXXXX"];
+//    [_serverPort setClearButtonMode:UITextFieldViewModeWhileEditing];
+//    [_serverPort setEnabled:NO];
+//    [_serverPort setValidators:@[@"presence", @"length(1, 8)"]];
+//    [section addItem:_serverPort];
     
     _appId = [RENumberItem itemWithTitle:@"App ID" value:nil placeholder:@"2"];
+    [_appId setClearButtonMode:UITextFieldViewModeWhileEditing];
     [_appId setValidators:@[@"presence"]];
     [section addItem:_appId];
     
     _versionId = [RETextItem itemWithTitle:@"Version ID" value:nil placeholder:@"1, 2, 3, live, staging ..."];
+    [_versionId setClearButtonMode:UITextFieldViewModeWhileEditing];
     [_versionId setValidators:@[@"presence"]];
     [_versionId setKeyboardType:UIKeyboardTypeURL];
     [_versionId setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_versionId];
     
-    _apiKey = [RETextItem itemWithTitle:@"API Key" value:nil placeholder:@"laufhao78f67sdg58gs4dga4df8gad"];
-    [_apiKey setEnabled:NO];
-    [_versionId setValidators:@[@"presence"]];
-    [_versionId setKeyboardType:UIKeyboardTypeURL];
-    [_versionId setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [section addItem:_apiKey];
+//    _apiKey = [RETextItem itemWithTitle:@"API Key" value:nil placeholder:@"laufhao78f67sdg58gs4dga4df8gad"];
+//    [_apiKey setClearButtonMode:UITextFieldViewModeWhileEditing];
+//    [_apiKey setEnabled:NO];
+//    [_versionId setValidators:@[@"presence"]];
+//    [_versionId setKeyboardType:UIKeyboardTypeURL];
+//    [_versionId setAutocorrectionType:UITextAutocorrectionTypeNo];
+//    [section addItem:_apiKey];
     
     [self assignValues];
 }
@@ -104,10 +110,10 @@
         [_apiKey setValue:_detailItem.apiKey];
     }
     else {
-        [_accountName setValue:@""];
-        //[_serverHost setValue:@"http://api.liveui.io"];
+        [_accountName setValue:@":)"];
+        [_serverHost setValue:@"http://s3.amazonaws.com/admin.wellbakedapp.com/API_1.0"];
+        //[_serverHost setValue:@""];
         //[_serverPort setValue:@"80"];
-        [_serverHost setValue:@""];
         [_serverPort setValue:@""];
         [_appId setValue:@"2"];
         [_versionId setValue:@"staging"];
