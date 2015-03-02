@@ -50,6 +50,8 @@
 		158E96E01A9CE5CB00910246 /* WBAURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 158E96B51A9CE5CB00910246 /* WBAURLSessionManager.m */; };
 		158E96EF1A9CEB6D00910246 /* WBALanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 158E96EE1A9CEB6D00910246 /* WBALanguage.m */; };
 		158E96F21A9CED8100910246 /* WBAKeyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 158E96F11A9CED8100910246 /* WBAKeyDetailViewController.m */; };
+		15D3EB3E1AA49BDD0074FB54 /* WBAHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */; };
+		15D3EB411AA4A0ED0074FB54 /* WBAUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */; };
 		DC405F5BCE0743B71E727624 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1F04CB07E19B45422898A7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +157,10 @@
 		158E96EE1A9CEB6D00910246 /* WBALanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBALanguage.m; sourceTree = "<group>"; };
 		158E96F01A9CED8100910246 /* WBAKeyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAKeyDetailViewController.h; sourceTree = "<group>"; };
 		158E96F11A9CED8100910246 /* WBAKeyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAKeyDetailViewController.m; sourceTree = "<group>"; };
+		15D3EB3C1AA49BDC0074FB54 /* WBAHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAHeaders.h; sourceTree = "<group>"; };
+		15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAHeaders.m; sourceTree = "<group>"; };
+		15D3EB3F1AA4A0ED0074FB54 /* WBAUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAUUID.h; sourceTree = "<group>"; };
+		15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAUUID.m; sourceTree = "<group>"; };
 		7137CAB6F947C83B601327C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E1F04CB07E19B45422898A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D820F5E94CC73BB8C745A0FD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +365,10 @@
 				158E968A1A9CE5CA00910246 /* WBATranslations.m */,
 				158E96ED1A9CEB6D00910246 /* WBALanguage.h */,
 				158E96EE1A9CEB6D00910246 /* WBALanguage.m */,
+				15D3EB3C1AA49BDC0074FB54 /* WBAHeaders.h */,
+				15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */,
+				15D3EB3F1AA4A0ED0074FB54 /* WBAUUID.h */,
+				15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */,
 			);
 			path = WellBakedApp;
 			sourceTree = "<group>";
@@ -576,10 +586,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				158E96CB1A9CE5CB00910246 /* WBAMain.m in Sources */,
+				15D3EB411AA4A0ED0074FB54 /* WBAUUID.m in Sources */,
 				158E96DB1A9CE5CB00910246 /* WBANetworkReachabilityManager.m in Sources */,
 				158E96C31A9CE5CB00910246 /* UIButton+WBA.m in Sources */,
 				158E96D31A9CE5CB00910246 /* UIImageView+WBANetworking.m in Sources */,
 				158E96D11A9CE5CB00910246 /* UIAlertView+WBANetworking.m in Sources */,
+				15D3EB3E1AA49BDD0074FB54 /* WBAHeaders.m in Sources */,
 				158E96D01A9CE5CB00910246 /* UIActivityIndicatorView+WBANetworking.m in Sources */,
 				158E96CD1A9CE5CB00910246 /* WBATranslationData.m in Sources */,
 				156DED5C1A9C849900FF8725 /* WBASettings.m in Sources */,
