@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+@import UIKit;
+@import CoreData;
 
 
 @class WBADetailViewController;

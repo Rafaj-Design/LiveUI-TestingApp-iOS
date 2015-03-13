@@ -52,6 +52,7 @@
 		158E96F21A9CED8100910246 /* WBAKeyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 158E96F11A9CED8100910246 /* WBAKeyDetailViewController.m */; };
 		15D3EB3E1AA49BDD0074FB54 /* WBAHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */; };
 		15D3EB411AA4A0ED0074FB54 /* WBAUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */; };
+		15D3EB441AA4B5700074FB54 /* WBAKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3EB431AA4B5700074FB54 /* WBAKeychain.m */; };
 		DC405F5BCE0743B71E727624 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1F04CB07E19B45422898A7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,8 @@
 		15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAHeaders.m; sourceTree = "<group>"; };
 		15D3EB3F1AA4A0ED0074FB54 /* WBAUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAUUID.h; sourceTree = "<group>"; };
 		15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAUUID.m; sourceTree = "<group>"; };
+		15D3EB421AA4B5700074FB54 /* WBAKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAKeychain.h; sourceTree = "<group>"; };
+		15D3EB431AA4B5700074FB54 /* WBAKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAKeychain.m; sourceTree = "<group>"; };
 		7137CAB6F947C83B601327C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E1F04CB07E19B45422898A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D820F5E94CC73BB8C745A0FD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				15D3EB3D1AA49BDD0074FB54 /* WBAHeaders.m */,
 				15D3EB3F1AA4A0ED0074FB54 /* WBAUUID.h */,
 				15D3EB401AA4A0ED0074FB54 /* WBAUUID.m */,
+				15D3EB421AA4B5700074FB54 /* WBAKeychain.h */,
+				15D3EB431AA4B5700074FB54 /* WBAKeychain.m */,
 			);
 			path = WellBakedApp;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D3EB441AA4B5700074FB54 /* WBAKeychain.m in Sources */,
 				158E96CB1A9CE5CB00910246 /* WBAMain.m in Sources */,
 				15D3EB411AA4A0ED0074FB54 /* WBAUUID.m in Sources */,
 				158E96DB1A9CE5CB00910246 /* WBANetworkReachabilityManager.m in Sources */,
